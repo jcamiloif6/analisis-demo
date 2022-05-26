@@ -9,8 +9,6 @@
     >|
     <router-link to="/Interpolacion/homeInterpolacion" tag="button"
       >Interpolación</router-link>
-    <router-link to="/Interpolacion/homeInterpolacion" tag="button"
-      >Interpolació3</router-link>
   </div>
 </template>
 
