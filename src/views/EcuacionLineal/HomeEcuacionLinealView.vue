@@ -1,6 +1,6 @@
 <template>
   <div class="homeEcuacionLineal">
-    <h1>Ecuaciones No Lineales</h1>
+    <h1>Ecuaciones Lineales</h1>
     <router-link to="/EcuacionLineal/eliminacionGauss" tag="button"
       >Eliminación Gausseana</router-link
     > |
