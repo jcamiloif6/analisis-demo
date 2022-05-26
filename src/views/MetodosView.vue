@@ -1,6 +1,6 @@
 <template>
   <div class="metodos">
-    <h1>This is a numerical methods page</h1>
+    <h1>¿Qué Métodos deseas utilizar?</h1>
     <router-link to="/EcuacionNoLineal/homeEcuacionNoLineal" tag="button"
       >Ecuaciones No Lineales</router-link
     >|
