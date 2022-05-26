@@ -11,14 +11,6 @@ const routes: Array<RouteConfig> = [
     component: HomeView
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  },
-  {
     path: '/metodos',
     name: 'metodos',
     // route level code-splitting
@@ -175,6 +167,57 @@ const routes: Array<RouteConfig> = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views//EcuacionLineal/JacobiView.vue')
   },
+
+  //Interpolación
+  {
+    path: '/Interpolacion/homeInterpolacion',
+    name: 'homeInterpolacion',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views//Interpolacion/HomeInterpolacionView.vue')
+  },
+  {
+    path: '/Interpolacion/vandermonde',
+    name: 'vandermonde',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views//Interpolacion/VandermondeView.vue')
+  },
+  {
+    path: '/Interpolacion/difDivididas',
+    name: 'difDivididas',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views//Interpolacion/DifDivididasView.vue')
+  },
+  {
+    path: '/Interpolacion/lagrange',
+    name: 'lagrange',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views//Interpolacion/LagrangeView.vue')
+  },
+  {
+    path: '/Interpolacion/splineLineal',
+    name: 'splineLineal',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views//Interpolacion/SplineLinealView.vue')
+  },
+  {
+    path: '/Interpolacion/splineCuadratico',
+    name: 'splineCuadratico',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views//Interpolacion/SplineCuadraticoView.vue')
+  },
+
 
   {
     path: '*',
