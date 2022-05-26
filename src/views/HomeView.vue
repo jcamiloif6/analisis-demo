@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Bienvenido a la página de Métodos Numérico"/>
+    <HelloWorld msg="Bienvenido a la página de Métodos Numéricos"/>
   </div>
 </template>
 
