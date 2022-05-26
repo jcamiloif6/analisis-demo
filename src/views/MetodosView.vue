@@ -7,7 +7,9 @@
      <router-link to="/EcuacionLineal/homeEcuacionLineal" tag="button"
       >Ecuaciones Lineales</router-link
     >|
-    <button>Interpolación</button>
+    <router-link to="/Interpolacion/homeInterpolacion" tag="button"
+      >Interpolación</router-link
+    >|
   </div>
 </template>
 
