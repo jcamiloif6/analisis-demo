@@ -1,7 +1,6 @@
 <template>
   <div class="gauss-seidel">
     <h1>Método de Gauss-Seidel</h1>
-    <button>Button</button> |
     <router-link to="/EcuacionLineal/homeEcuacionLineal" tag="button"
       >Otros métodos de Ecuaciones Lineales</router-link
     >
@@ -15,5 +14,7 @@
     <input v-model="message" placeholder="" />
     <p>Número máximo de iterciones: {{ message }}</p>
     <input v-model="message" placeholder="" />
+    <p></p>
+    <router-link to="" tag="button">Calcular</router-link>
   </div>
 </template>

@@ -40,6 +40,24 @@ button {
   font-family: '微软雅黑',arail;
   cursor: pointer;
 }
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid rgb(58, 49, 175);
+}
+
+thead, tfoot {
+  color: rgba(20, 19, 19, 0.589);
+}
+
+th, td {
+  padding: 5px;
+  border-collapse: collapse;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+  border: 3px solid rgb(58, 49, 175);
+}
 </style>
 
 <script>
@@ -53,4 +71,5 @@ button {
       }
     },
   }
+
 </script>
