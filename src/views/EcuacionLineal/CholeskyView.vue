@@ -1,7 +1,6 @@
 <template>
   <div class="cholesky">
     <h1>Factorización por Cholesky</h1>
-    <button>Button</button> |
     <router-link to="/EcuacionLineal/homeEcuacionLineal" tag="button"
       >Otros métodos de Ecuaciones Lineales</router-link
     >
@@ -9,5 +8,7 @@
     <input v-model="message" placeholder="" />
     <p>Vector de Términos Independientes: {{ message }}</p>
     <input v-model="message" placeholder="" />
+    <p></p>
+    <router-link to="" tag="button">Calcular</router-link>
   </div>
 </template>

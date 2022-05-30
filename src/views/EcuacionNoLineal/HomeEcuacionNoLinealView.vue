@@ -17,7 +17,7 @@
       >Raíces Múltiples</router-link
     > |
     <router-link to="/EcuacionNoLineal/reglaFalsa" tag="button"
-      >Ragla Falsa</router-link
+      >Regla Falsa</router-link
     > |
     <router-link to="/EcuacionNoLineal/secante" tag="button"
       >Secante</router-link
