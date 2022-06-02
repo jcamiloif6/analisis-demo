@@ -23,11 +23,6 @@
       >Factorización LU Simple</router-link
     > |
     <p></p>
-    <router-link to="/EcuacionLineal/sustProgresiva" tag="button"
-      >Sustitución Progresiva</router-link
-    > |
-    <router-link to="/EcuacionLineal/sustRegresiva" tag="button"
-      >Sustitución Regresiva</router-link
     > 
   </div>
 </template>

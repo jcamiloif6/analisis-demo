@@ -6,10 +6,6 @@
     >
     <p>Función: {{ message }}</p>
     <input v-model="message" placeholder="" />
-    <p>Primera derivada de la función: {{ message }}</p>
-    <input v-model="message" placeholder="" />
-    <p>Segunda derivada de la función: {{ message }}</p>
-    <input v-model="message" placeholder="" />
     <p>X Inicial: {{ message }}</p>
     <input v-model="message" placeholder="" />
     <p>Tolerancia: {{ message }}</p>
