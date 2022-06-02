@@ -3,36 +3,61 @@
     <router-link to="/EcuacionNoLineal/homeEcuacionNoLineal" tag="button"
       >Otros métodos de Ecuaciones No Lineales</router-link
     >
-    <p>Función: {{ messageFuncionPuntoFijo }}</p>
-    <input v-model="messageFuncionPuntoFijo" placeholder="" />
-    <p>X Inicial: {{ messageXInicialPuntoFijo }}</p>
-    <input v-model="messageXInicialPuntoFijo" placeholder="" />
-    <p>Número de Iteraciones: {{ messageNMaxPuntoFijo }}</p>
-    <input v-model="messageNMaxPuntoFijo" placeholder="" />
-    <p>Tolerancia: {{ messageToleranciaPuntoFijo }}</p>
-    <input v-model="messageToleranciaPuntoFijo" placeholder="" />
+    <p>Función: {{ gn }}</p>
+    <input v-model="gn" placeholder="" />
+    <p>X Inicial: {{ x0 }}</p>
+    <input v-model="x0" placeholder="" />
+    <p>Número de Iteraciones: {{ nMax }}</p>
+    <input v-model="nMax" placeholder="" />
+    <p>Tolerancia: {{ tol }}</p>
+    <input v-model="tol" placeholder="" />
     <p></p>
-    <router-link to="" tag="button">Calcular</router-link>
-    <p></p>
-    <!-- <table class="table stripped bordered">
-      <thead>
-        <tr>
-          <th>Iteracion</th>
-          <th>Xi</th>
-          <th>G(xi)</th>
-          <th>F(xi)</th>
-          <th>Error</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table> -->
+    <button v-on:click="answer">Calcular</button>
+    <div v-if="solution">
+    <div>
+      <p>Pasos</p>
+      <ul>
+        <li v-for="paso in solution['pasos']" :key="paso">
+        {{ paso }}
+        </li>
+      </ul>
+    </div>
+    <p><strong>Respuesta: </strong>{{ solution['response'] }}</p>
+    </div>
   </div>
 </template>
+
+<script lang="ts">
+import axios from 'axios';
+import Vue from 'vue';
+
+export default Vue.extend({
+  data() {
+    return {
+      gn: "(x*E**x-x**2-3)/5",
+      x0: -0.5,
+      tol: 0.00005,
+      nMax: 10,
+      solution: null
+    }
+  },
+  methods: {
+    answer() {
+      const headers = {
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Headers': '*',
+          'Access-Control-Allow-Credentials': true,
+          'Content-Type': 'application/json',
+        }
+      axios.post(
+        '/api/punto-fijo',
+        {gn: this.$data.gn,
+        x0: parseInt(this.$data.x0),
+        tol: parseFloat(this.$data.tol),
+        nMax: parseInt(this.$data.nMax)},
+        { headers })
+        .then(response => (this.solution = response.data));
+    }
+  }
+})
+</script>

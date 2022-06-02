@@ -10,9 +10,6 @@
     <router-link to="/Interpolacion/splineCuadratico" tag="button"
       >Spline Cuadrático</router-link
     > |
-    <router-link to="/Interpolacion/splineLineal" tag="button"
-      >Spline Lineal</router-link
-    > |
     <router-link to="/Interpolacion/vandermonde" tag="button"
       >Vandermonde</router-link
     >

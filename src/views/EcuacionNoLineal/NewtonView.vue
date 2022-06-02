@@ -4,34 +4,61 @@
     <router-link to="/EcuacionNoLineal/homeEcuacionNoLineal" tag="button"
       >Otros métodos de Ecuaciones No Lineales</router-link
     >
-    <p>Función: {{ messageFuncionNewton }}</p>
-    <input v-model="messageFuncionNewton" placeholder="" />
-    <p>X Inicial: {{ messageXInicialNewton }}</p>
-    <input v-model="messageXInicialNewton" placeholder="" />
-    <p>Número de Iteraciones: {{ messageNMaxNewton }}</p>
-    <input v-model="messageNMaxNewton" placeholder="" />
-    <p>Tolerancia: {{ messageToleranciaNewton }}</p>
-    <input v-model="messageToleranciaNewton" placeholder="" />
+    <p>Función: {{ fn }}</p>
+    <input v-model="fn" placeholder="" />
+    <p>X Inicial: {{ x0 }}</p>
+    <input v-model="x0" placeholder="" />
+    <p>Número de Iteraciones: {{ nMax }}</p>
+    <input v-model="nMax" placeholder="" />
+    <p>Tolerancia: {{ tol }}</p>
+    <input v-model="tol" placeholder="" />
     <p></p>
-    <router-link to="" tag="button">Calcular</router-link>
-    <p></p>
-    <!-- <table class="table stripped bordered">
-      <thead>
-        <tr>
-          <th>Iteracion</th>
-          <th>Xi</th>
-          <th>F(xi)</th>
-          <th>Error</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table> -->
+    <button v-on:click="answer">Calcular</button>
+    <div v-if="solution">
+    <div>
+      <p>Pasos</p>
+      <ul>
+        <li v-for="paso in solution['pasos']" :key="paso">
+        {{ paso }}
+        </li>
+      </ul>
+    </div>
+    <p><strong>Respuesta: </strong>{{ solution['response'] }}</p>
+    </div>
   </div>
 </template>
+
+<script lang="ts">
+import axios from 'axios';
+import Vue from 'vue';
+
+export default Vue.extend({
+  data() {
+    return {
+      fn: "(E**x)-(5*x)+2",
+      x0: 0.5,
+      tol: 10E-05,
+      nMax: 100,
+      solution: null
+    }
+  },
+  methods: {
+    answer() {
+      const headers = {
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Headers': '*',
+          'Access-Control-Allow-Credentials': true,
+          'Content-Type': 'application/json',
+        }
+      axios.post(
+        '/api/newton',
+        {fn: this.$data.fn,
+        x0: parseInt(this.$data.x0),
+        tol: parseFloat(this.$data.tol),
+        nMax: parseInt(this.$data.nMax)},
+        { headers })
+        .then(response => (this.solution = response.data));
+    }
+  }
+})
+</script>
