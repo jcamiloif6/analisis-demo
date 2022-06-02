@@ -21,8 +21,14 @@
     > |
     <router-link to="/EcuacionLineal/luSimple" tag="button"
       >Factorización LU Simple</router-link
-    > |
-    <p></p>
     > 
+    <p></p>
+    <router-link to="/EcuacionLineal/eliminacionGaussPivoteoParcial" tag="button"
+      >Elimnación Gausseana Pivoteo Parcial</router-link
+    > |
+    <router-link to="/EcuacionLineal/eliminacionGaussPivoteoTotal" tag="button"
+      >Elimnación Gausseana Pivoteo Total</router-link
+    > 
+    <p></p>
   </div>
 </template>

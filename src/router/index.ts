@@ -104,6 +104,22 @@ const routes: Array<RouteConfig> = [
     component: () => import(/* webpackChunkName: "about" */ '../views//EcuacionLineal/EliminacionGaussView.vue')
   },
   {
+    path: '/EcuacionLineal/eliminaciongaussPivoteoTotal',
+    name: 'eliminacionGaussPivoteoTotal',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views//EcuacionLineal/EliminacionGaussPivoteoTotalView.vue')
+  },
+  {
+    path: '/EcuacionLineal/eliminaciongaussPivoteoParcial',
+    name: 'eliminacionGaussPivoteoParcial',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views//EcuacionLineal/EliminacionGaussPivoteoParcialView.vue')
+  },
+  {
     path: '/EcuacionLineal/sustRegresiva',
     name: 'sustRegresiva',
     // route level code-splitting
