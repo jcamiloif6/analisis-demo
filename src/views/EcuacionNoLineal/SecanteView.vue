@@ -4,20 +4,20 @@
     <router-link to="/EcuacionNoLineal/homeEcuacionNoLineal" tag="button"
       >Otros métodos de Ecuaciones No Lineales</router-link
     >
-    <p>Función: {{ message }}</p>
-    <input v-model="message" placeholder="" />
-    <p>X Inicial: {{ message }}</p>
-    <input v-model="message" placeholder="" />
-    <p>X Final: {{ message }}</p>
-    <input v-model="message" placeholder="" />
-    <p>Tolerancia: {{ message }}</p>
-    <input v-model="message" placeholder="" />
-    <p>Número de Iteraciones: {{ message }}</p>
-    <input v-model="message" placeholder="" />
+    <p>Función: {{ messageFuncionSecante }}</p>
+    <input v-model="messageFuncionSecante" placeholder="" />
+    <p>X Inicial: {{ messageXInicialSecante }}</p>
+    <input v-model="messageXInicialSecante" placeholder="" />
+    <p>X Final: {{ messageXFinalSecante }}</p>
+    <input v-model="messageXFinalSecante" placeholder="" />
+    <p>Tolerancia: {{ messageToleranciaSecante }}</p>
+    <input v-model="messageToleranciaSecante" placeholder="" />
+    <p>Número de Iteraciones: {{ messageNMaxSecante }}</p>
+    <input v-model="messageNMaxSecante" placeholder="" />
     <p></p>
     <router-link to="" tag="button">Calcular</router-link>
     <p></p>
-    <table class="table stripped bordered">
+    <!-- <table class="table stripped bordered">
       <thead>
         <tr>
           <th>Iteracion</th>
@@ -34,6 +34,6 @@
           <td></td>
         </tr>
       </tbody>
-    </table>
+    </table> -->
   </div>
 </template>

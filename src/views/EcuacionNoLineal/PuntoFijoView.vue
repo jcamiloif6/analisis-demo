@@ -3,18 +3,18 @@
     <router-link to="/EcuacionNoLineal/homeEcuacionNoLineal" tag="button"
       >Otros métodos de Ecuaciones No Lineales</router-link
     >
-    <p>Función: {{ message }}</p>
-    <input v-model="message" placeholder="" />
-    <p>X Inicial: {{ message }}</p>
-    <input v-model="message" placeholder="" />
-    <p>Número de Iteraciones: {{ message }}</p>
-    <input v-model="message" placeholder="" />
-    <p>Tolerancia: {{ message }}</p>
-    <input v-model="message" placeholder="" />
+    <p>Función: {{ messageFuncionPuntoFijo }}</p>
+    <input v-model="messageFuncionPuntoFijo" placeholder="" />
+    <p>X Inicial: {{ messageXInicialPuntoFijo }}</p>
+    <input v-model="messageXInicialPuntoFijo" placeholder="" />
+    <p>Número de Iteraciones: {{ messageNMaxPuntoFijo }}</p>
+    <input v-model="messageNMaxPuntoFijo" placeholder="" />
+    <p>Tolerancia: {{ messageToleranciaPuntoFijo }}</p>
+    <input v-model="messageToleranciaPuntoFijo" placeholder="" />
     <p></p>
     <router-link to="" tag="button">Calcular</router-link>
     <p></p>
-    <table class="table stripped bordered">
+    <!-- <table class="table stripped bordered">
       <thead>
         <tr>
           <th>Iteracion</th>
@@ -33,6 +33,6 @@
           <td></td>
         </tr>
       </tbody>
-    </table>
+    </table> -->
   </div>
 </template>

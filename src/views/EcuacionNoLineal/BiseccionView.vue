@@ -4,18 +4,18 @@
     <router-link to="/EcuacionNoLineal/homeEcuacionNoLineal" tag="button"
       >Otros métodos de Ecuaciones No Lineales</router-link
     >
-    <p>X inicial: {{ message }}</p>
-    <input v-model="message" placeholder="" />
-    <p>X final: {{ message }}</p>
-    <input v-model="message" placeholder="" />
-    <p>Tolerancia: {{ message }}</p>
-    <input v-model="message" placeholder="" />
-    <p>Función: {{ message }}</p>
-    <input v-model="message" placeholder="" />
+    <p>X inicial: {{ messageXInicialBiseccion }}</p>
+    <input v-model="messageXInicialBiseccion" placeholder="" />
+    <p>X final: {{ messageXFinalBiseccion }}</p>
+    <input v-model="messageXFinalBiseccion" placeholder="" />
+    <p>Tolerancia: {{ messageToleranciaBiseccion }}</p>
+    <input v-model="messageToleranciaBiseccion" placeholder="" />
+    <p>Función: {{ messageFuncionBiseccion }}</p>
+    <input v-model="messageFuncionBiseccion" placeholder="" />
     <p></p>
     <router-link to="" tag="button">Calcular</router-link>
     <p></p>
-    <table class="table stripped bordered">
+    <!--<table class="table stripped bordered">
       <thead>
         <tr>
           <th>Iteracion</th>
@@ -36,7 +36,7 @@
           <td></td>
         </tr>
       </tbody>
-    </table>
+    </table>-->
   </div>
 </template>
 

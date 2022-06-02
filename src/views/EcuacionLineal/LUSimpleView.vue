@@ -4,10 +4,10 @@
     <router-link to="/EcuacionLineal/homeEcuacionLineal" tag="button"
       >Otros métodos de Ecuaciones Lineales</router-link
     >
-    <p>Matríz: {{ message }}</p>
-    <input v-model="message" placeholder="" />
-    <p>Vector de Términos Independientes: {{ message }}</p>
-    <input v-model="message" placeholder="" />
+    <p>Matríz: {{ messageMatrizLUSimple }}</p>
+    <input v-model="messageMatrizLUSimple" placeholder="" />
+    <p>Vector de Términos Independientes: {{ messageVecIndependienteLUSimple }}</p>
+    <input v-model="messageVecIndependienteLUSimple" placeholder="" />
     <p></p>
     <router-link to="" tag="button">Calcular</router-link>
   </div>

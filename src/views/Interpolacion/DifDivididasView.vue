@@ -4,12 +4,12 @@
     <router-link to="/Interpolacion/homeInterpolacion" tag="button"
       >Otros métodos de Interpolación</router-link
     >
-    <p>Coordenadas x: {{ message }}</p>
-    <input v-model="message" placeholder="" />
-    <p>Coordenadas y: {{ message }}</p>
-    <input v-model="message" placeholder="" />
-    <p>Nuevo punto a encontrar: {{ message }}</p>
-    <input v-model="message" placeholder="" />
+    <p>Coordenadas x: {{ messageCoordXDifDivididas }}</p>
+    <input v-model="messageCoordXDifDivididas" placeholder="" />
+    <p>Coordenadas y: {{ messageCoordYDifDivididas }}</p>
+    <input v-model="messageCoordYDifDivididas" placeholder="" />
+    <p>Nuevo punto a encontrar: {{ messageNPDifDivididas }}</p>
+    <input v-model="messageNPDifDivididas" placeholder="" />
     <p></p>
     <router-link to="" tag="button">Calcular</router-link>
   </div>
